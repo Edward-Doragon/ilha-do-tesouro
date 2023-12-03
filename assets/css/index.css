@@ -1,0 +1,67 @@
+body {
+  background: url(/assets/img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  /* background: url(imagem.jpg) center center cover no-repeat fixed; */
+  font-family: sans-serif;
+}
+
+.header-container{
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  width: 70%;
+  margin: auto;
+  font-size: 3rem;
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--yellow-sun);
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.title-highlight {
+  font-size: 4rem;
+}
+
+.button-container {
+  display: flex;
+  width: 640px;
+  margin: 300px auto;
+  justify-content: space-between;
+}
+
+.divider {
+  display: flex;
+  width: 96%;
+  padding: 10px;
+}
+
+.line {
+  border-color: white;
+  margin: auto;
+  border-style: dashed;
+  border-width: 10px;
+  border-top: 0;
+  width: 85%;
+  border-radius: 100px;
+}
+
+.x {
+  float: right;
+}
+
+footer {
+  background-color: var(--black-noar);
+  font-family: 'Kodchasan', sans-serif;
+  color: var(--peaceful-heat);
+  padding: 8px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

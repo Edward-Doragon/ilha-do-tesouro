@@ -1,62 +1,35 @@
 @import url('https://fonts.cdnfonts.com/css/fredoka-one');
+@import url('https://fonts.cdnfonts.com/css/kodchasan');
 
 :root {
   --yellow-sun: #FFDA54;
-}
-
-body {
-  background: url(/assets/img/bg-principal.jpg);
-  font-family: sans-serif;
-}
-
-.header-container{
-  display: block;
-  text-align: center;
-  padding: 20px;
-}
-
-.title {
-  width: 70%;
-  margin: auto;
-  font-size: 4rem;
-  font-family: 'Fredoka One', sans-serif;
-  color: var(--yellow-sun);
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.button-container {
-  display: flex;
-  width: 580px;
-  margin: 400px auto;
-  justify-content: space-between;
+  --black-noar: #11111A;
+  --peaceful-heat: #F9F6ED;
+  --peaceful-heat-twilight: #E6D7AA;
+  --peaceful-heat-dusk: #baa978;
+  --pacific-ocean: #3E5DA8;
 }
 
 .button {
+  width: 280px;
+  background: var(--peaceful-heat);
+  height: 70px;
   padding: 20px 60px;
   border: none;
   border-radius: 6px;
+  box-shadow: 0px 5px 0px 0px var(--peaceful-heat-twilight);
 }
 
 .button:hover {
   cursor: pointer;
-  background: #F5BF64;
+  background: var(--peaceful-heat-twilight);
+  box-shadow: 0px 5px 0px 0px var(--peaceful-heat-dusk);
 }
 
-a {
-  font-family: sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: black;
+.button-text {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 1.5rem;
+  color: var(--pacific-ocean);
   text-transform: uppercase;
   text-decoration: none;
-}
-
-footer {
-  background-color: #1e203b;
-  color: whitesmoke;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
 }

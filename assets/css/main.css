@@ -1,13 +1,55 @@
+@import url("./style.css");
+
 .island-select-container {
   width: 94%;
   margin: auto;
   border-radius: 8px;
   padding: 10px;
   height: 300px;
-  background: red;
+  background: rgb(44, 44, 44);
+}
+
+.island-group {
+  display: flex;
+  gap: 20px;
+}
+
+.island {
+  display: flex;
+  background-color: aquamarine;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.island-option-group {
+  display: flex;
+  gap: 20px;
+}
+
+.island-option {
+  background-color: var(--yellow-sun);
+  padding: 10px;
+  border-radius: 2px;
+  width: 40px;
+  height: 10px;
+  gap: 10px;
+}
+
+.island-option:hover {
+  cursor: pointer;
 }
 
 .chosen-islands-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
   width: 90%;
   height: 100px;
   border-radius: 6px;

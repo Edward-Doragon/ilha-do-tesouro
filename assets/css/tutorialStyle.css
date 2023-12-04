@@ -1,0 +1,55 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height:100vh;
+    background-size: 100% 100%;
+    background-image: url('/assets/images/fundo.png'); 
+    background-repeat: no-repeat; 
+}
+main {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height:100vh;
+    background-image: url('/assets/images/fundoMapa.png'); 
+    background-size: 110% 85%;
+    background-position: bottom 2vh center;
+    background-repeat: no-repeat; 
+    display: flex; 
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium';
+    color: rgb(167, 90, 60);
+    text-align: center;
+    font-weight: bold;
+}
+.voltar{
+    width: 20vw;    
+}
+.voltar a{
+    padding-top: 10%;
+    height: 100vh;
+}
+img{
+    height: 10vh;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+#informacoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+button{
+    align-self: center;
+    margin-top: 62vh;
+
+}

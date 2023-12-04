@@ -14,7 +14,6 @@ body {
     height:100vh;
     background-size: 100% 100%;
     background-image: url('../img/fundo.png'); 
-    background-image: url('../img/fundo.png'); 
     background-repeat: no-repeat; 
 }
 main {
@@ -22,7 +21,6 @@ main {
     padding: 0;
     width: 100vw;
     height:100vh;
-    background-image: url('../img/fundoMapa.png'); 
     background-image: url('../img/fundoMapa.png'); 
     background-size: 110% 85%;
     background-position: bottom 2vh center;
@@ -42,14 +40,12 @@ h1 {
     font-weight: bold;
 }
 .voltar {
-.voltar {
     width: 20vw;    
 }
 .voltar a  {
     padding-top: 5%;
     height: 100vh;
 }
-img {
 img {
     height: 10vh;
     margin-top: 12%;

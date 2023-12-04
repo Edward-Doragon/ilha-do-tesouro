@@ -8,22 +8,38 @@ let islandOptionC = document.querySelector('#islandC');
 let islandOptionD = document.querySelector('#islandD');
 let islandOptionE = document.querySelector('#islandE');
 let islandOptionF = document.querySelector('#islandF');
-let islandOptionG = document.querySelector('#islandG');
 
-confirmIslandsBtn.addEventListener('click', function() { console.log('clicado') })
+confirmIslandsBtn.addEventListener('click', checkNavegation)
 islandOptionA.addEventListener('click', () => addIsland('A'));
 islandOptionB.addEventListener('click', () => addIsland('B'));
 islandOptionC.addEventListener('click', () => addIsland('C'));
 islandOptionD.addEventListener('click', () => addIsland('D'));
 islandOptionE.addEventListener('click', () => addIsland('E'));
 islandOptionF.addEventListener('click', () => addIsland('F'));
-islandOptionG.addEventListener('click', () => addIsland('G'));
-
-
 
 let option = {
   position: Number,
   island: Number
+}
+
+function checkNavegation() {
+  console.log('navegou');
+
+  let isFirstItemCorrect = islandSequence[0] !== 'A';
+  let isLastItemCorrect = islandSequence.at(-1) === 'F';
+
+  //checa se o primeiro item é o Morro do Mosquete: A
+  if(isFirstItemCorrect) {
+    alert('Essa rota é impossível de ser navegada, você deve iniciar do Morro do Mosquete');
+  } else {
+
+    //checa se conseguiu chegar a rota final
+    if(isLastItemCorrect) {
+      alert("Acertou!");
+    } else {
+      alert('Você não conseguiu chegar ao destino final')
+    }
+  }
 }
 
 function addIsland(island) {

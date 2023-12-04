@@ -1,11 +1,19 @@
-
-body{
+@import url('https://fonts.cdnfonts.com/css/fredoka-one');
+:root {
+    --yellow-sun: #FFDA54;
+    --black-noar: #11111A;
+    --peaceful-heat: #F9F6ED;
+    --peaceful-heat-twilight: #E6D7AA;
+    --peaceful-heat-dusk: #baa978;
+    --pacific-ocean: #3E5DA8;
+  }
+body {
     margin: 0;
     padding: 0;
     width: 100vw;
     height:100vh;
     background-size: 100% 100%;
-    background-image: url('/assets/images/fundo.png'); 
+    background-image: url('../img/fundo.png'); 
     background-repeat: no-repeat; 
 }
 main {
@@ -13,7 +21,7 @@ main {
     padding: 0;
     width: 100vw;
     height:100vh;
-    background-image: url('/assets/images/fundoMapa.png'); 
+    background-image: url('../img/fundoMapa.png'); 
     background-size: 110% 85%;
     background-position: bottom 2vh center;
     background-repeat: no-repeat; 
@@ -22,34 +30,76 @@ main {
     overflow: hidden;
     
 }
-h1{
-    margin: 0;
+h1 {
+    margin-top: 1%;
     padding: 0;
     font-size: 60px;
-    font-family: 'Franklin Gothic Medium';
-    color: rgb(167, 90, 60);
+    font-family: 'Fredoka One', sans-serif;
+    color: var(--yellow-sun);
     text-align: center;
     font-weight: bold;
 }
-.voltar{
+.voltar {
     width: 20vw;    
 }
-.voltar a{
-    padding-top: 10%;
+.voltar a  {
+    padding-top: 5%;
     height: 100vh;
 }
-img{
+img {
     height: 10vh;
-    margin-top: 15%;
+    margin-top: 12%;
     margin-left: 15%;
-}
-#informacoes{
+    transition: opacity 0.5s ease-in-out;
+    } 
+    img:hover {
+        opacity: 0.5; 
+    }
+#informacoes {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 3%;
+    padding: 0 5%;
+    align-items: center;
 }
-button{
+.square {
+    display: flex;
+    background-color: var(--peaceful-heat);
+    width: 165px;
+    height: 200px;
+    border-radius: 5%;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+  }
+p {
+    font-family: 'fredoka one';
+    font-weight: bold;
+    color:var(--black-noar);
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+button {
     align-self: center;
-    margin-top: 62vh;
-
-}
+    margin-top: 25vh;
+    background: var(--peaceful-heat);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 5px 0px 0px var(--peaceful-heat-twilight);
+    width: 280px;
+} 
+  button:hover {
+    cursor: pointer;
+    background: var(--peaceful-heat-twilight);
+    box-shadow: 0px 5px 0px 0px var(--peaceful-heat-dusk);
+  }
+  .button-text {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.5rem;
+    color: var(--pacific-ocean);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+ 

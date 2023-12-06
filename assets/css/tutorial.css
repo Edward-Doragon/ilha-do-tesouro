@@ -1,0 +1,71 @@
+@import url("./style.css");
+
+body {
+    height:100vh;
+    background-size: 100% 100%;
+    background-image: url('../img/tutorialBg.png'); 
+    background-repeat: no-repeat; 
+}
+main {
+    height:100vh;
+    display: flex; 
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 1%;
+    font-size: 4rem;
+    font-family: 'Fredoka One', sans-serif;
+    color: var(--yellow-sun);
+    text-align: center;
+    font-weight: bold;
+}
+
+#info {
+    width: 90%;
+    height: 80%;
+    background-image: url('../img/tutorialMapa.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card-container {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 150px 0 80px 0;
+}
+
+.card {
+    display: flex;
+    background-color: var(--peaceful-heat);
+    width: 165px;
+    height: 200px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+p {
+    font-family: 'fredoka one';
+    font-weight: bold;
+    color:var(--black-noar);
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+   padding: 0 15px;
+   height: 40px;
+   width: 200px;
+}
+ 

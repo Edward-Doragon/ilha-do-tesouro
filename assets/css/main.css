@@ -1,6 +1,7 @@
 @import url("./style.css");
 
 html {
+  height: 100%;
   background-image: url("../svg/mainBg.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +39,7 @@ main {
 }
 
 .error-message {
-  font-family: 'Kodchasan', sans-serif; sans-serif;
+  font-family: 'Kodchasan', sans-serif;
   font-weight: bold
 }
 
@@ -70,11 +71,10 @@ main {
 
 .island-option {
   background-color: var(--yellow-sun);
-  padding: 10px;
   border-radius: 2px;
   width: 160px;
-  height: 30px;
-  gap: 10px;
+  height: 50px;
+  border: none;
 }
 
 .island-option:hover {

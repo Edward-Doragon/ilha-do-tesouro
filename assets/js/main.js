@@ -1,13 +1,13 @@
 
-/*
-  Morro do Mosquete: ilha 1,
-  Ilha dos Piratas: ilha 2,
-  Ilha dos Amontinas: ilha 3,
-  Enseada dos Contrabandistas: ilha 4,
-  Baía do Naufrágio: ilha 5,
-  Ilha dos Mortos: ilha 6,
-  Ilha do Tesouro: ilha 7
-*/
+const islandNames = {
+  'Ilha 1': 'Morro do Mosquete',
+  'Ilha 2': 'Ilha dos Piratas',
+  'Ilha 3': 'Ilha dos Amontinas',
+  'Ilha 4': 'Enseada dos Contrabandistas',
+  'Ilha 5': 'Baía do Naufrágio',
+  'Ilha 6': 'Ilha dos Mortos',
+  'Ilha 7': 'Ilha do Tesouro',
+};
 
 const resultsOfTheUser = []
 
@@ -46,7 +46,7 @@ islandOptionF.addEventListener('click', () => addIsland(6));
 islandOptionG.addEventListener('click', () => addIsland(7));
 
 function createIslandElement(island) {
-  let div = document.createElement('div');
+  let div = document.createElement('button');
   div.className = 'island-option';
   div.id = 'islandSelected' + island;
 
@@ -75,6 +75,7 @@ function createIslandElement(island) {
     break;
     case 7:
       spanText = document.createTextNode('Ilha do Tesouro');
+      disableAllButtons();
     break;
   }
 
@@ -88,10 +89,8 @@ function createIslandElement(island) {
     let index = islandSequence.indexOf(island);
     
     // Remove a div e o item da sequência exceto a primeira
-    if(island !== 1) {
-      removeIslandElement(index + 1);
-      islandSequence.splice(index, 1);
-    }
+    removeIslandElement(index + 1);
+    islandSequence.splice(index, 1);
 
   });
 }
@@ -104,11 +103,21 @@ function removeIslandElement(index) {
     itemToRemove.remove();
     resultsOfTheUser.splice(index - 1, 1)
 
+    if(itemToRemove.outerText ==  "Ilha do Tesouro") {
+      enableAllButtons();
+    }
+
+    if(itemToRemove.outerText ==  "Morro do Mosquete") {
+      disableButtons()
+    }
+
     // Atualiza os índices dos elementos restantes
     let remainingItems = routerItems.querySelectorAll('.island-option');
     remainingItems.forEach((item, i) => {
       item.id = `islandSelected${i + 1}`;
     });
+
+    hiddenError()
   }
 }
 
@@ -121,7 +130,7 @@ function checkNavegation() {
     if (i < resultsOfTheUser.length - 1) {
       const nextIsland = resultsOfTheUser[i + 1];
       if (!currentState.routes.includes(nextIsland)) {
-        error.textContent = `Rota impossível entre", ${resultsOfTheUser[i]} e ${nextIsland}`
+        error.textContent = `Não existe uma rota direta entre ${islandNames[resultsOfTheUser[i]]} para a ${islandNames[nextIsland]}`
         showError()
         return; // Encerra a função se a rota não for válida
       }
@@ -131,10 +140,10 @@ function checkNavegation() {
   }
 
   if (arrivedAtFinalIsland) {
-    error.textContent = "Usuário brabo: Chegou à ilha do tesouro"
+    error.textContent = "Parabéns!! Você chegou à ilha do tesouro"
     showError()
   } else {
-    error.textContent = "Você ainda não chegou ao seu destino final, a Ilha do tesouro"
+    error.textContent = "O seu destino final é a Ilha do tesouro"
     showError()
   }
 }
@@ -144,10 +153,7 @@ function addIsland(island) {
   createIslandElement(island);
 
   resultsOfTheUser.push(`Ilha ${island}`);
-}
-
-function hiddenError() {
-  errorContainer.style.display = 'none';
+  hiddenError()
 }
 
 //Desabilita todos os botões, menos o morro do mosquete no inicio da cena;
@@ -161,6 +167,7 @@ function disableButtons() {
   islandOptionG.disabled = true;
 }
 
+//desabilita o morro do mosquete após ser selecionado e habilitada o restante
 function disableFirstButton() {
   islandOptionA.disabled = true;
   islandOptionB.disabled = false;
@@ -171,8 +178,32 @@ function disableFirstButton() {
   islandOptionG.disabled = false;
 }
 
+//
+function disableAllButtons(){
+  islandOptionA.disabled = true;
+  islandOptionB.disabled = true;
+  islandOptionC.disabled = true;
+  islandOptionD.disabled = true;
+  islandOptionE.disabled = true;
+  islandOptionF.disabled = true;
+  islandOptionG.disabled = true;
+}
+
+function enableAllButtons(){
+  islandOptionB.disabled = false;
+  islandOptionC.disabled = false;
+  islandOptionD.disabled = false;
+  islandOptionE.disabled = false;
+  islandOptionF.disabled = false;
+  islandOptionG.disabled = false;
+}
+
 function showError() {
   errorContainer.style.display = 'block';
+}
+
+function hiddenError() {
+  errorContainer.style.display = 'none';
 }
 
 hiddenError();

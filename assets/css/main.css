@@ -91,9 +91,11 @@ main {
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 40px);
   gap: 20px;
   padding: 20px;
-  height: 50px;
+  min-height: 50px;
   border-radius: 6px;
   background: var(--peaceful-heat);
 }

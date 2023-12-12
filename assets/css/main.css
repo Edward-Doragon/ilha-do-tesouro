@@ -46,22 +46,86 @@ main {
 .island-group {
   display: flex;
   justify-content: center;
+  margin: auto;
   margin-bottom: 30px;
-  width: 100%;
+  width: 637px;
   height: 440px;
   gap: 20px;
+  background: white;
+  position: relative;
 }
 
-.island {
-  display: flex;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
+.island-response {
+  position: absolute;
+  visibility: hidden;
+  margin-top: 20px;
+  z-index: 1;
 }
+
+.island { 
+  position: absolute;
+  /* border: dashed blueviolet 1px; */
+  z-index: 2;
+}
+
+.island:hover { 
+  cursor: pointer;
+}
+
+#island-1 {
+  top: 340px;
+  right: 280px;
+
+  width: 180px;
+  height: 80px;
+}
+#island-2 {
+  top: 230px;
+  right: 420px;
+
+  width: 180px;
+  height: 100px;
+}
+#island-3 {
+  top: 270px;
+  right: 140px;
+
+  width: 150px;
+  height: 100px;
+}
+#island-4 {
+  top: 170px;
+  right: 30px;
+
+  width: 150px;
+  height: 100px;
+}
+#island-5 {
+  top: 50px;
+  right: 470px;
+
+  width: 150px;
+  height: 100px;
+}
+#island-6 {
+  top: 50px;
+  right: 260px;
+
+  width: 150px;
+  height: 100px;
+}
+#island-7 {
+  top: 50px;
+  right: 20px;
+
+  width: 180px;
+  height: 100px;
+}
+
+#island-7:hover {
+  cursor: default;
+}
+
 
 .island-option-group {
   display: flex;

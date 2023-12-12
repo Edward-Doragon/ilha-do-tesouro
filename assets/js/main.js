@@ -33,6 +33,14 @@ let islandOptionE = document.querySelector('#island5');
 let islandOptionF = document.querySelector('#island6');
 let islandOptionG = document.querySelector('#island7');
 
+let islandResponse1 = document.querySelector('#island-1');
+let islandResponse2 = document.querySelector('#island-2');
+let islandResponse3 = document.querySelector('#island-3');
+let islandResponse4 = document.querySelector('#island-4');
+let islandResponse5 = document.querySelector('#island-5');
+let islandResponse6 = document.querySelector('#island-6');
+let islandResponse7 = document.querySelector('#island-7');
+
 let errorMessage = document.querySelector("#error");
 let errorContainer = document.querySelector(".error-container")
 
@@ -43,7 +51,45 @@ islandOptionC.addEventListener('click', () => addIsland(3));
 islandOptionD.addEventListener('click', () => addIsland(4));
 islandOptionE.addEventListener('click', () => addIsland(5));
 islandOptionF.addEventListener('click', () => addIsland(6));
-islandOptionG.addEventListener('click', () => addIsland(7));
+
+
+responseImg = document.querySelector('.island-response')
+islandResponse1.addEventListener('click', () => showResponse(1));
+islandResponse2.addEventListener('click', () => showResponse(2));
+islandResponse3.addEventListener('click', () => showResponse(3));
+islandResponse4.addEventListener('click', () => showResponse(4));
+islandResponse5.addEventListener('click', () => showResponse(5));
+islandResponse6.addEventListener('click', () => showResponse(6));
+islandResponse7.addEventListener('click', () => showResponse(7));
+
+
+function showResponse(response) {
+  switch(response) {
+    case 1:
+      responseImg.src = "../assets/img/ilhas-resposta-01-sem-bg.png";
+    break;
+    case 2:
+      responseImg.src = "../assets/img/ilhas-resposta-02-sem-bg.png";
+    break;
+    case 3:
+      responseImg.src = "../assets/img/ilhas-resposta-03-sem-bg.png";
+    break;
+    case 4:
+      responseImg.src = "../assets/img/ilhas-resposta-04-sem-bg.png";
+    break;
+    case 5:
+      responseImg.src = "../assets/img/ilhas-resposta-05-sem-bg.png";
+    break;
+    case 6:
+      responseImg.src = "../assets/img/ilhas-resposta-06-sem-bg.png";
+    break;
+    case 7:
+      responseImg.style.visibility = 'hidden';
+    break;
+  }
+
+  responseImg.style.visibility = "visible";
+}
 
 function createIslandElement(island) {
   let div = document.createElement('button');

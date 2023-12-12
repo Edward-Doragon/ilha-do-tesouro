@@ -51,6 +51,7 @@ islandOptionC.addEventListener('click', () => addIsland(3));
 islandOptionD.addEventListener('click', () => addIsland(4));
 islandOptionE.addEventListener('click', () => addIsland(5));
 islandOptionF.addEventListener('click', () => addIsland(6));
+islandOptionG.addEventListener('click', () => addIsland(7));
 
 
 responseImg = document.querySelector('.island-response')
@@ -102,7 +103,7 @@ function createIslandElement(island) {
   switch(island) {
     case 1:
       spanText = document.createTextNode('Morro do Mosquete');
-      disableFirstButton();
+      enableAllButtons()
     break;
     case 2:
       spanText = document.createTextNode('Ilha dos Piratas');
@@ -151,10 +152,6 @@ function removeIslandElement(index) {
 
     if(itemToRemove.outerText ==  "Ilha do Tesouro") {
       enableAllButtons();
-    }
-
-    if(itemToRemove.outerText ==  "Morro do Mosquete") {
-      disableButtons()
     }
 
     // Atualiza os índices dos elementos restantes
@@ -236,6 +233,7 @@ function disableAllButtons(){
 }
 
 function enableAllButtons(){
+  islandOptionA.disabled = false;
   islandOptionB.disabled = false;
   islandOptionC.disabled = false;
   islandOptionD.disabled = false;

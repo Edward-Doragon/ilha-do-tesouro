@@ -254,3 +254,4 @@ function hiddenError() {
 
 hiddenError();
 disableButtons();
+showResponse(1)
